@@ -10,8 +10,8 @@ const Navbar = () => {
                 </h1>
 
             <div className="flex gap-x-10 text-xs md:text-xl">
-                <p> <a href="/#categorias">Categorias</a> </p>
-                <p> <a href="#productos">Productos</a> </p>
+                <p> <a href="/FrontStore#categorias">Categorias</a> </p>
+                <p> <a href="/FrontStore#productos">Productos</a> </p>
             </div>
         </header>
 
