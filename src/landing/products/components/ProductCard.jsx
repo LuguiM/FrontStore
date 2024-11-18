@@ -1,4 +1,8 @@
 import Modal from "./Modal"
+import AOS from 'aos';
+
+AOS.refreshHard();
+
 
 const ProductCard = ({ data, styleClass }) => {
     return (
