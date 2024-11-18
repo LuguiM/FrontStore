@@ -60,9 +60,9 @@ const Modal = ({ idProp }) => {
                 style={"bg-color3 hover:bg-color4 text-colorWhite cursor-pointer hover:shadow-lg mx-auto  rounded-lg border-none py-2 px-2 text-sm"}
                 text='+ Info' />
 
-            <Dialog title='Detalles' isOpen={isModalOpen} onClose={() => setModalOpen(false)} styleClass={'w-[40rem]'} contentHeight={'85vh'} >
+            <Dialog title='Detalles' isOpen={isModalOpen} onClose={() => setModalOpen(false)} styleClass={'md:w-[40rem]'} contentHeight={'85vh'} >
                 <div className="px-12 flex flex-col  gap-y-10">
-                    <div className="flex items-center gap-x-8">
+                    <div className="flex flex-col md:flex-row items-center gap-8">
                         <Image styleClass={'object-contain w-[229px] h-[10rem]'} url={productData.image} alt={productData.title} />
                         <div className="flex flex-col gap-y-7">
                             <h3 className="text-justify">{productData.title}</h3>
@@ -77,7 +77,7 @@ const Modal = ({ idProp }) => {
                     <ContentPart title="Raiting">
 
                         <div className="flex flex-col mx-auto">
-                            <div className="flex gap-x-5 items-center">
+                            <div className="flex flex-col md:flex-row gap-x-5 items-center">
                                 <h1><span className="text-xl">{rating.rate}</span> / 5</h1>
 
                                 <div className="flex gap-x-2 ">
