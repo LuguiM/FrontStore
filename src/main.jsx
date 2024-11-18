@@ -1,3 +1,4 @@
+
 import * as React from "react";
 import ReactDOM from "react-dom/client";
 import './assets/index.css'
@@ -25,26 +26,29 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
     },
     {
-        path:"/category/men's clothing",
+        path: "/category/men's clothing",
         errorElement: <ErrorPage />,
         element: <MenClothing />,
     },
     {
-        path:"/category/women's clothing",
+        path: "/category/women's clothing",
         errorElement: <ErrorPage />,
         element: <WomanClothing />,
     },
     {
-        path:"/category/jewelery",
+        path: "/category/jewelery",
         errorElement: <ErrorPage />,
         element: <Jewelery />,
     },
     {
-        path:"/category/electronics",
+        path: "/category/electronics",
         errorElement: <ErrorPage />,
         element: <Electronics />,
     },
-])
+],
+{
+    basename:'/FrontStore'
+})
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
