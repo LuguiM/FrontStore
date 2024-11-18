@@ -3,8 +3,10 @@ import Icon from './IconComponent';
 
 const Dialog = ({ isOpen, onClose, title, children, styleClass, width, contentHeight }) => {
     useEffect(() => {
+
         if (isOpen) {
             document.body.classList.add('no-scroll');
+
         } else {
             document.body.classList.remove('no-scroll');
         }
@@ -15,7 +17,7 @@ const Dialog = ({ isOpen, onClose, title, children, styleClass, width, contentHe
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 z-10 flex items-center justify-center bg-gray-800 bg-opacity-50" >
+        <div data-aos="none" className="fixed inset-0 z-[1000] flex items-center justify-center bg-gray-800 bg-opacity-50" >
             <div id='DialogContainer' className={"bg-colorWhite rounded-2xl shadow-lg w-96 relative " + styleClass} style={{width: width}}>
                 <div id='DialogHeader' className="flex justify-between items-center py-4 px-8 border-b">
                     <h2 className="text-xl font-bold">{title}</h2>
