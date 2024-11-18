@@ -74,7 +74,7 @@ const Productos = () => {
 
     return (
         <>
-            <div id='productos' className="products-bg p-10 flex flex-col items-center gap-y-10 text-center">
+            <div id='productos' className="products-bg p-10 flex flex-col items-center gap-y-10 text-center" >
                 <div data-aos="zoom-in-down">
                     <h1 className="text-2xl md:text-4xl drop-shadow-xl">PRODUCTOS</h1>
                     <p className="md:text-xl mt-5 text-color2">Variedad de estilos y accesorios que te encataran</p>
@@ -95,7 +95,7 @@ const Productos = () => {
                     </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14 md:mx-14" data-aos="zoom-in">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14 md:mx-14" >
                     {/* <Modal ></Modal> */}
                     {products.length > 0 ? (
                         products.map(product => (
@@ -111,9 +111,9 @@ const Productos = () => {
             <Image styleClass={'bg-color6 w-full '} url={tillSvg} alt='Till' />
             <div className='bg-color6 px-10 flex flex-col-reverse md:flex-row '>
                 <Image animation={{
-                'data-aos':"zoom-out-right"
+                'data-aos':"zoom-in"
             }}  styleClass={' hidden lg:block drop-shadow-2xl mx-auto w-[34rem] xl:w-[40rem]'} url={coupleimg} alt={'couple'} />
-                <div data-aos="zoom-out" className='flex flex-col items-center justify-center gap-10 text-center pt-14'>
+                <div data-aos="zoom-in" className='flex flex-col items-center justify-center gap-10 text-center pt-14'>
                     <h1 className='text-3xl drop-shadow-2xl'>No te quedes sin tus artículos favoritos</h1>
                     <p className='text-color2 text-xl'>FrontSotre cuenta con envio a nivel nacional</p>
                     <Image styleClass={'h-[15rem]'} url={eviosAll} alt={'envios'} />
