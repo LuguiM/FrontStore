@@ -47,7 +47,7 @@ h6 {
 }
 
 .container-main {
-    @apply flex flex-col h-screen py-[1rem] text-blue;
+    @apply flex flex-col gap-y-10 h-screen py-[1rem] text-blue;
 }
 
 .container-spacing {
@@ -59,4 +59,16 @@ h6 {
 }
 .button-outlined {
     @apply bg-white text-pink text-bodyLarge border-2 border-pink py-2.5 px-4 rounded-lg hover:bg-pink hover:text-white transition duration-300;
+}
+
+.circle-base {
+    @apply rounded-full h-[10.25rem] w-[10.25rem] border-2 shadow-md object-cover
+}
+
+.pinkCircle {
+    @apply shadow-pink border-pink
+}
+
+.blueCircle {
+    @apply shadow-ligth-blue border-ligth-blue
 }
