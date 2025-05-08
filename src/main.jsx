@@ -1,29 +1,14 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router";
-
+import { RouterProvider } from "react-router";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { router } from "./routes/index";
 
-import {Layout} from "./layout/layout.jsx";
 
+if (window.location.pathname === "/") {
+  window.location.replace("/FrontStore");
+}
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    Component: Layout,
-    children: [
-      { index: true, element: <div>Homde</div> },
-    ]
-  },
-
-],
-  {
-    basename: "/FrontStore"
-  }
-);
 
 const root = document.getElementById("root");
 
