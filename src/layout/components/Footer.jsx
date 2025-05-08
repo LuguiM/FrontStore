@@ -2,6 +2,7 @@
 
 export const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className="border-t border-gray container-spacing">
+      Footer</div>
   )
 }

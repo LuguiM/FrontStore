@@ -4,7 +4,7 @@ export const Navbar = () => {
     <div className="border-b border-gray container-spacing">
         <div className=" flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
-            <img src="../../assets/react.svg" alt="Logo" className="w-10 h-10" />
+            <img src="../../../public/vite.svg" alt="Logo" className="w-10 h-10" />
             <h1 className="text-2xl font-bold">FrontStore</h1>
             </div>
             <nav className="flex gap-4">
