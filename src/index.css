@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-    --color-*: initial;
     --color-blue: #0D3A5F;
+    --color-ligth-blue: #A6C8CF;
     --color-ligth-purple: #3E4B81;
     --color-purple: #8763Af;
-    --color-ligth-pink: #FFB9F4;
-    --color-pink: #E885E5;
-    --color-gray: #C2B0D6;
-    --color-white: #f9f9f9;
+    --color-ligth-pink: #D4A1AD;
+    --color-pink: #E06A82;
+    --color-gray: #E3E3E2;
+    --color-white: #F7F7F5;
 
     --text-h1: 4rem;          /* 64px */
     --text-h2: 3.5rem;        /* 56px */
