@@ -7,6 +7,7 @@
     --color-purple: #8763Af;
     --color-ligth-pink: #D4A1AD;
     --color-pink: #E06A82;
+    --color-pink-dark: #C94A6A;
     --color-gray: #E3E3E2;
     --color-white: #F7F7F5;
 
@@ -45,12 +46,17 @@ h6 {
     font-style: normal;
 }
 
-
-
 .container-main {
     @apply flex flex-col h-screen py-[1rem] text-blue;
 }
 
 .container-spacing {
     @apply  px-[3rem] lg:px-[16rem] py-1;
+}
+
+.button-base {
+    @apply bg-pink text-white shadow-xl py-3 px-4 rounded-lg hover:bg-pink-dark transition duration-300;
+}
+.button-outlined {
+    @apply bg-white text-pink border-2 border-pink py-3 px-4 rounded-lg hover:bg-pink hover:text-white transition duration-300;
 }
