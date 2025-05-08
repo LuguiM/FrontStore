@@ -51,7 +51,7 @@ h6 {
 }
 
 .container-spacing {
-    @apply  px-[3rem] lg:px-[16rem] py-1;
+    @apply  px-[3rem] xl:px-[16rem] py-1;
 }
 
 .button-base {

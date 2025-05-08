@@ -13,13 +13,14 @@ export const Hero = () => {
             <div className='text-center mx-15 xl:mx-25'>
                 <p className='text-h6 !font-bold'>Meet the Store</p>
                 <h1>
-                    <span className='text-h2 tracking-tight'>Know your true style with</span>
-                    <span className='ml-2 text-h1 text-pink'>FrontStore</span>
+                    <span className='text-h5 md:text-h2 tracking-tight'>Know your true style with</span>
+                    <br className="sm:hidden" />
+                    <span className='ml-2 text-h4 md:text-h1 text-pink'>FrontStore</span>
                 </h1>
 
             </div>
                 <Button label="Shop now" isLink />
-            <div class="grid grid-cols-4 gap-x-16 h-64">
+            <div class="hidden lg:grid grid-cols-4 gap-x-16 h-64">
                 {
                     categories.map(c => (
                         <div class={`px-4 flex items-${c.position} justify-${c.position}`}>
