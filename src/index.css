@@ -55,7 +55,7 @@ h6 {
 }
 
 .button-base {
-    @apply bg-pink text-white text-bodyLarge shadow-xl py-2.5 px-4 rounded-lg hover:bg-pink-dark transition duration-300;
+    @apply bg-pink text-white text-bodyLarge shadow-lg py-2.5 px-4 rounded-lg hover:bg-pink-dark transition duration-300;
 }
 .button-outlined {
     @apply bg-white text-pink text-bodyLarge border-2 border-pink py-2.5 px-4 rounded-lg hover:bg-pink hover:text-white transition duration-300;
