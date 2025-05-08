@@ -1,7 +1,32 @@
 @import "tailwindcss";
 
+@theme {
+    --color-*: initial;
+    --color-blue: #0D3A5F;
+    --color-ligth-purple: #3E4B81;
+    --color-purple: #8763Af;
+    --color-ligth-pink: #FFB9F4;
+    --color-pink: #E885E5;
+    --color-gray: #C2B0D6;
+    --color-white: #f9f9f9;
+
+    --text-h1: 4rem;          /* 64px */
+    --text-h2: 3.5rem;        /* 56px */
+    --text-h3: 3rem;          /* 48px */
+    --text-h4: 2.5rem;        /* 40px */
+    --text-h5: 2rem;          /* 32px */
+    --text-h6: 1.5rem;        /* 24px */
+    --text-bodyLarge: 1.125rem;   /* 18px */
+    --text-bodyRegular: 1rem;     /* 16px */
+    --text-bodySmall: 0.875rem;   /* 14px */
+    --text-Paragraph: 1rem;       /* 16px */
+    
+}
+
 * {
     font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    background: var(--color-white);
 }
 
 body  {
@@ -21,31 +46,10 @@ h6 {
     font-style: normal;
 }
 
-@theme {
-    --color-*: initial;
-    --color-blue: #0D3A5F;
-    --color-ligth-purple: #3E4B81;
-    --color-purple: #8763Af;
-    --color-ligth-pink: #FFB9F4;
-    --color-pink: #E885E5;
-    --color-gray: #C2B0D6;
-    --color-white: "#EFEFEF";
 
-    --text-h1: 4rem;          /* 64px */
-    --text-h2: 3.5rem;        /* 56px */
-    --text-h3: 3rem;          /* 48px */
-    --text-h4: 2.5rem;        /* 40px */
-    --text-h5: 2rem;          /* 32px */
-    --text-h6: 1.5rem;        /* 24px */
-    --text-bodyLarge: 1.125rem;   /* 18px */
-    --text-bodyRegular: 1rem;     /* 16px */
-    --text-bodySmall: 0.875rem;   /* 14px */
-    --text-Paragraph: 1rem;       /* 16px */
-    
-}
 
 .container-main {
-    @apply flex flex-col h-screen py-[1rem];
+    @apply flex flex-col h-screen py-[1rem] text-blue;
 }
 
 .container-spacing {
