@@ -1,7 +1,9 @@
-
+import { Hero } from "../views/home";
 
 export const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <Hero />
+    </>
   )
 }
