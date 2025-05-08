@@ -18,7 +18,7 @@ const routes = [
 export const Navbar = () => {
   return (
     <div className="border-b border-gray container-spacing">
-      <div className=" flex justify-between items-center h-16">
+      <div className=" flex flex-col md:flex-row gap-y-2 justify-between items-center md:pb-2">
         <div className="flex items-center gap-2">
           <img src="/vite.svg" alt="Logo" className="w-10 h-10" />
           <h1 className="text-2xl font-bold">FrontStore</h1>
