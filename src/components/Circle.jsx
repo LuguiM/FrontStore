@@ -1,6 +1,6 @@
 import jewellery from '../assets/img/jewellery.jpg'
-import womanClothes from '../assets/img/woman_clothing.jpg'
-import menClothes from '../assets/img/men_clothing.jpg';
+import womanClothes from '../assets/img/woman_clothing.png'
+import menClothes from '../assets/img/men_clothing.png';
 import accesories from '../assets/img/accesories.jpg'
 
 const categories = [
