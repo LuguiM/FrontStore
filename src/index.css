@@ -11,17 +11,27 @@
     --color-gray: #E3E3E2;
     --color-white: #F7F7F5;
 
-    --text-h1: 4rem;          /* 64px */
-    --text-h2: 3.5rem;        /* 56px */
-    --text-h3: 3rem;          /* 48px */
-    --text-h4: 2.5rem;        /* 40px */
-    --text-h5: 2rem;          /* 32px */
-    --text-h6: 1.5rem;        /* 24px */
-    --text-bodyLarge: 1.125rem;   /* 18px */
-    --text-bodyRegular: 1rem;     /* 16px */
-    --text-bodySmall: 0.875rem;   /* 14px */
-    --text-Paragraph: 1rem;       /* 16px */
-    
+    --text-h1: 4rem;
+    /* 64px */
+    --text-h2: 3.5rem;
+    /* 56px */
+    --text-h3: 3rem;
+    /* 48px */
+    --text-h4: 2.5rem;
+    /* 40px */
+    --text-h5: 2rem;
+    /* 32px */
+    --text-h6: 1.5rem;
+    /* 24px */
+    --text-bodyLarge: 1.125rem;
+    /* 18px */
+    --text-bodyRegular: 1rem;
+    /* 16px */
+    --text-bodySmall: 0.875rem;
+    /* 14px */
+    --text-Paragraph: 1rem;
+    /* 16px */
+
 }
 
 * {
@@ -29,7 +39,7 @@
     background: var(--color-white);
 }
 
-body  {
+body {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -51,12 +61,13 @@ h6 {
 }
 
 .container-spacing {
-    @apply  px-[3rem] xl:px-[16rem] py-1;
+    @apply px-[3rem] xl:px-[16rem] py-1;
 }
 
 .button-base {
     @apply bg-pink text-white text-bodyLarge shadow-lg py-2.5 px-4 rounded-lg hover:bg-pink-dark transition duration-300;
 }
+
 .button-outlined {
     @apply bg-white text-pink text-bodyLarge border-2 border-pink py-2.5 px-4 rounded-lg hover:bg-pink hover:text-white transition duration-300;
 }
@@ -71,4 +82,19 @@ h6 {
 
 .blueCircle {
     @apply shadow-ligth-blue border-ligth-blue
+}
+
+/* carrousel */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
 }
