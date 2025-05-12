@@ -42,7 +42,7 @@ export const Categories = () => {
                 <h4 className="text-h4">Categories</h4>
             </div>
 
-            <div className="flex flex-wrap justify-between gap-6 p-6">
+            <div className="flex flex-col md:flex-row justify-between gap-6 p-6">
                 {categories.slice(0, 2).map(({ label, image, to, shape }) => (
                     <CategoryItemBtn key={label} to={to} label={label} image={image} shape={shape} />
                 ))}
