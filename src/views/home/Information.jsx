@@ -31,9 +31,6 @@ export const Information = () => {
                     <img src={woman} className="w-full h-full object-cover rounded-xl" /> 
                 </div>
             </div>
-
-
-
         </section>
     )
 }
