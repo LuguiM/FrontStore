@@ -3,7 +3,7 @@ import  ShippingWoman  from "../../assets/img/woman-ship.png"
 
 export const Shipping = () => {
     return (
-        <section className="grid grid-cols-2 gap-10">
+        <section className="grid md:grid-cols-2 gap-10">
             <div className="flex flex-col gap-y-4">
                 <h6 className="text-h6 text-ligth-pink">Send</h6>
                 <h4 className="text-h4">Don't run out of your favorite products</h4>
