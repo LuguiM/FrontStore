@@ -1,4 +1,4 @@
-import { Hero, Companies, Information, Categories } from "../views/home";
+import { Hero, Companies, Information, Categories, Shipping } from "../views/home";
 
 export const Home = () => {
   return (
@@ -7,6 +7,7 @@ export const Home = () => {
       <Companies />
       <Information />
       <Categories />
+      <Shipping />
     </main>
   )
 }

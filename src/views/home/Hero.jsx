@@ -19,7 +19,7 @@ export const Hero = () => {
                 </h1>
 
             </div>
-                <Button label="Shop now" isLink />
+            <Button label="Shop now" isLink />
             <div className="hidden lg:grid grid-cols-4 gap-x-16 h-64">
                 {
                     categories.map(c => (
