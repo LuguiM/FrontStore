@@ -9,10 +9,10 @@ const categories = [
 
 export const Hero = () => {
   return (
-    <section className="flex justify-between ">
+    <section className="flex justify-center md:justify-between text-center md:text-left">
         <div className="my-auto w-max">
             <h1 className="text-h2">Categories</h1>
-            <h2 className="text-bodyLarge  text-ligth-purple">Fashion according to your preference</h2>
+            <h2 className="text-bodyLarge text-ligth-purple">Fashion according to your preference</h2>
         </div>
         <div className="hidden lg:grid grid-cols-4  h-64 w-fit">
             {
