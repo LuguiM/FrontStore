@@ -1,7 +1,9 @@
-
+import { Hero } from "../views/categories"
 
 export const Categories = () => {
   return (
-    <div>Categories</div>
+    <main>
+      <Hero />
+    </main>
   )
 }
