@@ -18,17 +18,17 @@ export const Information = () => {
             <div className="grid grid-cols-4 grid-rows-4 gap-4">
 
                 <div className="row-span-2 col-start-1 row-start-3">
-                    <img src={jewellery} className="w-full h-full object-cover rounded-xl" />
+                    <img src={jewellery} className="w-full h-full object-cover rounded-xl" alt="jewellery" />
                 </div>
                 <div className="row-span-2 col-start-2 row-start-3">
-                    <img src={electronics} className="w-full h-full object-cover rounded-xl" />
+                    <img src={electronics} className="w-full h-full object-cover rounded-xl" alt="electronics" />
 
                 </div>
                 <div className="row-span-2 col-start-2 row-start-1">
-                    <img src={men} className="w-full h-full object-cover rounded-xl" />
+                    <img src={men} className="w-full h-full object-cover rounded-xl" alt="men Clothes" />
                 </div>
                 <div className="col-span-2 row-span-4 col-start-3 row-start-1">
-                    <img src={woman} className="w-full h-full object-cover rounded-xl" /> 
+                    <img src={woman} className="w-full h-full object-cover rounded-xl" alt="woman Clothes" /> 
                 </div>
             </div>
         </section>

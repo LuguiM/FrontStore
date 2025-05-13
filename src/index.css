@@ -69,7 +69,7 @@ main {
 }
 
 .button-base {
-    @apply bg-pink text-white text-bodyLarge shadow-lg py-2.5 px-4 rounded-lg hover:bg-pink-dark transition duration-300;
+    @apply bg-pink w-fit text-white text-bodyLarge shadow-lg py-2.5 px-4 rounded-lg hover:bg-pink-dark transition duration-300;
 }
 
 .button-outlined {
