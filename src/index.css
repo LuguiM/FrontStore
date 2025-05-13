@@ -56,6 +56,10 @@ h6 {
     font-style: normal;
 }
 
+main {
+    @apply flex flex-col gap-30
+}
+
 .container-main {
     @apply flex flex-col gap-y-10 h-screen py-[1rem] text-blue;
 }

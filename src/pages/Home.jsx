@@ -2,7 +2,7 @@ import { Hero, Companies, Information, Categories, Shipping } from "../views/hom
 
 export const Home = () => {
   return (
-    <main className="flex flex-col gap-30">
+    <main>
       <Hero />
       <Companies />
       <Information />
