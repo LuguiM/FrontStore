@@ -10,11 +10,11 @@ const categories = [
     { key: "Accesories", img: accesories, color: "blueCircle" },
 ]
 
-export const Circle = ({ categorie = "Jewellery" }) => {
+export const Circle = ({ categorie = "Jewellery", className }) => {
 
     const circleSelected = categories.find(c => c.key === categorie);
 
     return (
-        <img src={circleSelected.img} alt={circleSelected.key} className={`circle-base ${circleSelected.color}`} />
+        <img src={circleSelected.img} alt={circleSelected.key} className={`circle-base ${circleSelected.color} ${className}`} />
     )
 }
