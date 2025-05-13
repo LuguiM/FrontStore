@@ -1,7 +1,9 @@
-import React from 'react'
+import { Hero } from "../views/products"
 
 export const Products = () => {
   return (
-    <div>p</div>
+    <main>
+      <Hero />
+    </main>
   )
 }
