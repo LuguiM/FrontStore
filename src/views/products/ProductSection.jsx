@@ -60,7 +60,7 @@ export const ProductSection = () => {
                         type="text"
                         placeholder="Search"
                         value={search}
-                        onChange={(e) => setSearch(e.target.value)}
+                        onChange={setSearch}
                     />
                     <Select
                         options={categories}
