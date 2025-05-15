@@ -65,8 +65,9 @@ main {
 }
 
 .container-spacing {
-    @apply px-[3rem] lg:px-[7rem] xl:px-[16rem] py-1;
+  @apply w-full max-w-screen-xl mx-auto px-[3rem] md:px-[7rem] py-1;
 }
+
 
 .button-base {
     @apply bg-pink w-fit text-white text-bodyLarge shadow-lg py-2.5 px-4 rounded-lg hover:bg-pink-dark transition duration-300;
