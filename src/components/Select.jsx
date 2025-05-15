@@ -9,19 +9,19 @@ export const Select = ({ options = [], value, onChange, placeholder = "Categorie
     };
 
     return (
-        <div className="relative w-54">
+        <div className="relative w-auto md:w-54">
             <button
                 onClick={() => setOpen(!open)}
-                className="w-full px-5 py-3  border rounded-md shadow text-gray-400 border-ligth-blue flex gap-5 items-center justify-between"
+                className="w-full px-5 py-3 border rounded-md shadow text-gray-400 border-light-blue flex gap-5 items-center justify-between"
             >
-                <span className={value ? "text-gray-700" : "text-gray-400"}>
+                <span className={value ? "text-blue" : "text-gray-400"}>
                     {value || placeholder}
                 </span>
-                <div>d</div>
+                <div>▼</div>
             </button>
 
             {open && (
-                <ul className="absolute z-10 w-full mt-1 bg-white border rounded-md shadow-lg">
+                <ul className="absolute z-10 w-full mt-1 bg-white border rounded-md shadow-lg max-h-60 overflow-auto">
                     {options.map((option) => (
                         <li
                             key={option}
