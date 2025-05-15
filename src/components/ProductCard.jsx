@@ -17,7 +17,7 @@ export const ProductCard = ({ product }) => {
                 <img
                     src={product.image}
                     alt="Product"
-                    className="w-full h-64 object-contain bg-white p-4"
+                    className="w-full h-64 object-contain p-4"
                 />
 
                 <div className="px-4 pb-4">

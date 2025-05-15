@@ -18,7 +18,7 @@ export const ProductModal = ({ product, onClose }) => {
                     <img
                         src={product.image}
                         alt={product.title}
-                        className="w-full md:w-1/2 h-64 object-contain bg-white"
+                        className="w-full md:w-1/2 h-64 object-contain"
                     />
                     <div className="flex-1">
                         <h2 className="text-lg font-bold text-gray-800 mb-1">
