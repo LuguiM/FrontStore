@@ -12,7 +12,7 @@ export const Select = ({ options = [], value, onChange, placeholder = "Categorie
         <div className="relative w-auto md:w-54">
             <button
                 onClick={() => setOpen(!open)}
-                className="w-full px-5 py-3 border rounded-md shadow text-gray-400 border-light-blue flex gap-5 items-center justify-between"
+                className="w-full px-5 py-3 border rounded-md shadow text-gray-400 border-ligth-blue flex gap-5 items-center justify-between"
             >
                 <span className={value ? "text-blue" : "text-gray-400"}>
                     {value || placeholder}

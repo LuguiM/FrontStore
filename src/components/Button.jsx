@@ -1,6 +1,6 @@
 import { NavLink } from "react-router"
 
-export const Button = ({ isLink, outlined, label, click, className }) => {
+export const Button = ({ isLink, outlined, label, click, className, children }) => {
     const isLinkString = typeof isLink === "string";
     const link = isLinkString ? isLink : "/products";
 
@@ -12,6 +12,7 @@ export const Button = ({ isLink, outlined, label, click, className }) => {
         ) : (
             <button onClick={click} className={`${className} ${outlined ? "button-outlined" : "button-base"}`}>
                 {label}
+                {children}
             </button>
         )
     )

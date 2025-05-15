@@ -32,10 +32,20 @@
     --text-Paragraph: 1rem;
     /* 16px */
 
+    --animate-fade-in: fadeIn 0.2s ease-out;
+
 }
 
 * {
     font-family: 'Inter', sans-serif;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
 body {
@@ -65,8 +75,9 @@ main {
 }
 
 .container-spacing {
-    @apply px-[3rem] lg:px-[7rem] xl:px-[16rem] py-1;
+    @apply w-full max-w-screen-xl mx-auto px-[3rem] md:px-[7rem] py-1;
 }
+
 
 .button-base {
     @apply bg-pink w-fit text-white text-bodyLarge shadow-lg py-2.5 px-4 rounded-lg hover:bg-pink-dark transition duration-300;
@@ -91,14 +102,28 @@ main {
 /* carrousel */
 
 @keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .animate-marquee {
-  animation: marquee 25s linear infinite;
+    animation: marquee 25s linear infinite;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
 }
