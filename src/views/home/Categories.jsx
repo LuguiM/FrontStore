@@ -10,19 +10,19 @@ const categories = [
     {
         label: "Women's clothing",
         image: woman,
-        to: '/products?category=women clothing',
+        to: `/products?category=women's clothing`,
         shape: 'rounded-full',
     },
     {
         label: 'Jewelry',
         image: jewellery,
-        to: '/products?category=jewellery',
+        to: '/products?category=jewelery',
         shape: 'rounded-xl',
     },
     {
         label: "Men's clothing",
         image: men,
-        to: '/products?category=men clothing',
+        to: `/products?category=men's clothing`,
         shape: 'rounded-xl',
     },
     {

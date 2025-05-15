@@ -1,28 +1,67 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Input, Button, Select, ProductCard } from "../../components"
 import product from "../../services/products.services";
 import { useQuery } from "@tanstack/react-query";
-
+import { useSearchParams } from "react-router";
 
 export const ProductSection = () => {
-    const [selectedCategory, setSelectedCategory] = useState("");
+    const [searchParams] = useSearchParams();
+    const categoryFromQuery = searchParams.get("category");
 
-    const { isPending, error, data } = useQuery({
-        queryKey: ['products'],
+    const [search, setSearch] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState(categoryFromQuery || "");
+    const [filteredProducts, setFilteredProducts] = useState([]);
+
+    const { isPending, error, data: products } = useQuery({
+        queryKey: ["products"],
         queryFn: () => product.allProducts(),
-    })
+    });
 
-    const {data: categories} = useQuery({
-        queryKey: ['categories'],
-        queryFn: () => product.allCategories()
-    })
+    const { data: categories } = useQuery({
+        queryKey: ["categories"],
+        queryFn: () => product.allCategories(),
+    });
+
+    const filterProducts = () => {
+        if (!products) return [];
+
+        return products.filter((product) => {
+            const matchesSearch = search
+                ? product.title.toLowerCase().includes(search.toLowerCase())
+                : true;
+
+            const matchesCategory = selectedCategory
+                ? product.category === selectedCategory
+                : true;
+
+            return matchesSearch && matchesCategory;
+        });
+    };
+
+    useEffect(() => {
+        if (products) {
+            setFilteredProducts(filterProducts());
+        }
+    }, [search, selectedCategory, products]);
+
+
+    const handleClear = () => {
+        setSearch("");
+        setSelectedCategory("");
+    };
 
     return (
         <section className="flex flex-col gap-10">
             <h3 className="text-h4">Our products</h3>
+
             <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-end">
                 <span className="flex gap-4 flex-col md:flex-row">
-                    <Input type="text" placeholder="Search" />
+                    <Input
+                        type="text"
+                        placeholder="Search"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                    />
                     <Select
                         options={categories}
                         placeholder="Categories"
@@ -31,20 +70,18 @@ export const ProductSection = () => {
                     />
                 </span>
                 <span className="flex gap-4 justify-center">
-                    <Button label="Search" />
-                    <Button label="Clean" outlined />
+                    <Button label="Clean" outlined click={handleClear} />
                 </span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
                 {isPending && <p>Loading...</p>}
                 {error && <p>Error: {error.message}</p>}
-                {data && data.map((product) => (
-                    <ProductCard key={product.id} product={product} />
-                ))}
-
+                {filteredProducts &&
+                    filteredProducts.map((product) => (
+                        <ProductCard key={product.id} product={product} />
+                    ))}
             </div>
         </section>
-    )
-}
+    );
+};
