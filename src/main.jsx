@@ -10,11 +10,9 @@ import {
 
 const queryClient = new QueryClient()
 
-
 if (window.location.pathname === "/") {
   window.location.replace("/FrontStore");
 }
-
 
 const root = document.getElementById("root");
 

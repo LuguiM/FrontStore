@@ -1,14 +1,20 @@
 import { useState } from "react";
 import { Input, Button, Select, ProductCard } from "../../components"
-import product  from "../../services/products.services";
+import product from "../../services/products.services";
 import { useQuery } from "@tanstack/react-query";
 
 
 export const ProductSection = () => {
     const [selectedCategory, setSelectedCategory] = useState("");
+
     const { isPending, error, data } = useQuery({
         queryKey: ['products'],
         queryFn: () => product.allProducts(),
+    })
+
+    const {data: categories} = useQuery({
+        queryKey: ['categories'],
+        queryFn: () => product.allCategories()
     })
 
     return (
@@ -18,7 +24,7 @@ export const ProductSection = () => {
                 <span className="flex gap-4 flex-col md:flex-row">
                     <Input type="text" placeholder="Search" />
                     <Select
-                        options={["All", "Category 1", "Category 2"]}
+                        options={categories}
                         placeholder="Categories"
                         value={selectedCategory}
                         onChange={(value) => setSelectedCategory(value)}
