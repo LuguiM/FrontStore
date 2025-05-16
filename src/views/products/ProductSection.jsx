@@ -22,7 +22,7 @@ export const ProductSection = () => {
         queryFn: () => product.allCategories(),
     });
 
-    const [productPerPage, setProductsPerPage] = useState(6);
+    const productPerPage = 6;
     const [currentPage, setCurrentPage] = useState(1);
 
     const lastIndex = currentPage * productPerPage // = 1 * 6 = 6
