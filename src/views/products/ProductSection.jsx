@@ -77,10 +77,15 @@ export const ProductSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
                 {isPending && <p>Loading...</p>}
                 {error && <p>Error: {error.message}</p>}
-                {filteredProducts &&
-                    filteredProducts.map((product) => (
-                        <ProductCard key={product.id} product={product} />
-                    ))}
+                {!isPending && !error && (
+                    filteredProducts.length > 0 ? (
+                        filteredProducts.map((product) => (
+                            <ProductCard key={product.id} product={product} />
+                        ))
+                    ) : (
+                        <p>No products found</p>
+                    )
+                )}
             </div>
         </section>
     );
