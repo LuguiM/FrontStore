@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Input, Button, Select, ProductCard } from "../../components"
+import { Input, Button, Select, ProductCard, Pagination } from "../../components"
 import product from "../../services/products.services";
 import { useQuery } from "@tanstack/react-query";
 import { useSearchParams } from "react-router";
@@ -21,6 +21,12 @@ export const ProductSection = () => {
         queryKey: ["categories"],
         queryFn: () => product.allCategories(),
     });
+
+    const [productPerPage, setProductsPerPage] = useState(6);
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const lastIndex = currentPage * productPerPage // = 1 * 6 = 6
+    const firstIndex = lastIndex - productPerPage // = 6 - 6 = 0
 
     const filterProducts = () => {
         if (!products) return [];
@@ -77,15 +83,18 @@ export const ProductSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
                 {isPending && <p>Loading...</p>}
                 {error && <p>Error: {error.message}</p>}
-                {!isPending && !error && (
+                {filterProducts && (
                     filteredProducts.length > 0 ? (
                         filteredProducts.map((product) => (
                             <ProductCard key={product.id} product={product} />
                         ))
-                    ) : (
+                    ).slice(firstIndex, lastIndex) : (
                         <p>No products found</p>
                     )
                 )}
+            </div>
+            <div className="flex justify-center">
+                <Pagination perPage={productPerPage} currentPage={currentPage} setCurrentPage={setCurrentPage} total={filteredProducts.length} />
             </div>
         </section>
     );

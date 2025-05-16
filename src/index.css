@@ -127,3 +127,23 @@ main {
         transform: scale(1)
     }
 }
+
+.active-pagination {
+    @apply shadow-xl bg-pink text-white rounded-lg
+}
+
+.page-item {
+    @apply py-2 px-3 cursor-pointer
+}
+
+.page-link {
+    @apply cursor-pointer
+}
+
+.disabled {
+  color: #474545;           
+  pointer-events: none;      
+  cursor: not-allowed;    
+  opacity: 0.6;
+  transition: opacity 0.3s; 
+}
