@@ -18,6 +18,7 @@ export const ProductCard = ({ product }) => {
                     src={product.image}
                     alt="Product"
                     className="w-full h-64 object-contain p-4"
+                    loading="lazy"
                 />
 
                 <div className="px-4 pb-4">
