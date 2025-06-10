@@ -3,10 +3,10 @@ import men from "../../assets/img/man-products.png"
 
 export const Hero = () => {
     return (
-        <section className="border border-pink rounded-md flex p-5 md:p-0 shadow-lg">
+        <section className="border border-pink rounded-md flex p-4 md:p-0 shadow-lg">
             <img src={woman} alt="banner_woman" className="hidden lg:block w-[321px] h-[393px] -mt-14 -ml-1" />
             <div className="text-center my-auto">
-                <h1 className="text-pink text-h3">FrontStore</h1>
+                <h1 className="text-pink text-h4 md:text-h3">FrontStore</h1>
                 <h2 className="text-h4">Quality Products</h2>
 
                 <p className="text-ligth-purple text-Paragraph">
